@@ -7,7 +7,6 @@ function init() {
       selectButton.addEventListener('click', () =>{
       audio.play();
   });
-
   const selectElement = document.getElementById('horn-select');
   selectElement.addEventListener('change', (event) => {
     if(event.target.value == "air-horn"){
