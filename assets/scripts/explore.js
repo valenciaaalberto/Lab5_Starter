@@ -8,7 +8,6 @@ const synth = window.speechSynthesis;
 const inputTxt = document.getElementById('text-to-speak');
 const voiceSelect = document.getElementById('voice-select');
 const faceImg = document.getElementsByTagName("img")[0];
-
 let voices = [];
 
 function populateVoiceList() {
