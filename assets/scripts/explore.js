@@ -42,8 +42,19 @@ populateVoiceList();
       }
     }
     synth.speak(utterThis);
-    faceImg.src = "assets/images/smiling-open.png"
+    faceImg.src = "assets/images/smiling-open.png";
     inputTxt.blur();
   });
+  
+  function displayCorrImg(){
+    if(synth.speaking){
+      faceImg.src = "assets/images/smiling-open.png";
+    }else{
+      faceImg.src = "assets/images/smiling.png";
+    }  
+  }
+  
+  setInterval(displayCorrImg);
+ 
   
 }
