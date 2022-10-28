@@ -8,7 +8,6 @@ const synth = window.speechSynthesis;
 const inputTxt = document.getElementById('text-to-speak');
 const voiceSelect = document.getElementById('voice-select');
 const faceImg = document.getElementsByTagName("img")[0];
-
 let voices = [];
 
 function populateVoiceList() {
@@ -26,6 +25,15 @@ function populateVoiceList() {
 }
 
 populateVoiceList();
+function displayCorrImg(){
+  if(synth.speaking){
+    faceImg.src = "assets/images/smiling-open.png";
+  }else{
+    faceImg.src = "assets/images/smiling.png";
+  }  
+}
+
+setInterval(displayCorrImg);
 
   if (speechSynthesis.onvoiceschanged !== undefined) {
     speechSynthesis.onvoiceschanged = populateVoiceList;
@@ -42,8 +50,9 @@ populateVoiceList();
       }
     }
     synth.speak(utterThis);
-    faceImg.src = "assets/images/smiling-open.png"
+    faceImg.src = "assets/images/smiling-open.png";
     inputTxt.blur();
   });
+ 
   
 }
