@@ -26,6 +26,15 @@ function populateVoiceList() {
 }
 
 populateVoiceList();
+function displayCorrImg(){
+  if(synth.speaking){
+    faceImg.src = "assets/images/smiling-open.png";
+  }else{
+    faceImg.src = "assets/images/smiling.png";
+  }  
+}
+
+setInterval(displayCorrImg);
 
   if (speechSynthesis.onvoiceschanged !== undefined) {
     speechSynthesis.onvoiceschanged = populateVoiceList;
@@ -45,16 +54,6 @@ populateVoiceList();
     faceImg.src = "assets/images/smiling-open.png";
     inputTxt.blur();
   });
-  
-  function displayCorrImg(){
-    if(synth.speaking){
-      faceImg.src = "assets/images/smiling-open.png";
-    }else{
-      faceImg.src = "assets/images/smiling.png";
-    }  
-  }
-  
-  setInterval(displayCorrImg);
  
   
 }
