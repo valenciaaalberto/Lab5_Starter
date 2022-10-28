@@ -50,7 +50,6 @@ populateVoiceList();
     utterThis.pitch = pitch.value;
     utterThis.rate = rate.value;
     synth.speak(utterThis);
-
     inputTxt.blur();
   }
   
