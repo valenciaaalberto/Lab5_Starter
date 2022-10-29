@@ -41,7 +41,6 @@ setInterval(displayCorrImg);
 
   document.getElementsByTagName("button")[0].addEventListener('click',(event) =>{
     event.preventDefault();
-    console.log(inputTxt.value);
     const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
     const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
     for (let i = 0; i < voices.length ; i++) {
