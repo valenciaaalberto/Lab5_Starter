@@ -12,6 +12,7 @@ function init() {
   selectElement.addEventListener('change', (event) => {
     if(event.target.value == "air-horn"){
       displayImg("assets/images/air-horn.svg");
+      audio = new Audio("assets/audio/air-horn.mp3");
     }else if(event.target.value == "car-horn"){
       displayImg("assets/images/car-horn.svg")
       audio = new Audio("assets/audio/car-horn.mp3");
